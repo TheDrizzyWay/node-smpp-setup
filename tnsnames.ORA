@@ -1,0 +1,161 @@
+EXTPROC_CONNECTION_DATA =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = IPC)(KEY = EXTPROC1))
+    )
+    (CONNECT_DATA =
+      (SID = PLSExtProc)
+      (PRESENTATION = RO)
+    )
+  )
+
+ORACLR_CONNECTION_DATA = 
+  (DESCRIPTION = 
+    (ADDRESS_LIST = 
+      (ADDRESS = (PROTOCOL = IPC)(KEY = EXTPROC1)) 
+    ) 
+    (CONNECT_DATA = 
+      (SID = CLRExtProc) 
+      (PRESENTATION = RO) 
+    ) 
+  ) 
+  EMTS =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.178.0.33)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = emts)
+    )
+  )
+
+  EMTSTEST = 
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.150.141.200)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = emts)
+    )
+  )
+
+TDW = 
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.160.140.31)(PORT = 1522))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = TDW)
+    )
+  )
+
+TABS610 =                                                          
+  (DESCRIPTION =                                                   
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.160.140.11)(PORT = 1521))
+    (CONNECT_DATA =                                                
+      (SERVER = DEDICATED)                                         
+      (SERVICE_NAME = PRODTABS)                                    
+      (INSTANCE_NAME = TABS2)                                      
+    )                                                              
+  )
+
+ORACLETABSUAT = 
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.160.141.91)(PORT = 1523))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = UATTABS)
+    )
+  )
+
+TABSPROD = 
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.160.161.69)(PORT = 1529))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = prodtabs)
+      (SRVR = DEDICATED)
+    )
+  )
+SERCOMEGLE = 
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.160.151.66)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = DWDEV)
+      (SRVR = DEDICATED)
+    )
+  )
+
+BIDatabase = 
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.160.151.12)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = dwdev)
+    )
+  )
+  
+  ORCL =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = NNLT0644.etisalatng.com)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = orcl.etisalatng.com)
+    )
+  )
+  
+  SERCOMPROD =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST =10.160.172.102)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = PROD)
+    )
+  )
+  
+CRMDB =
+ (DESCRIPTION =
+  (ADDRESS = (PROTOCOL = TCP)(HOST = ssc01-scan)(PORT = 1529))
+  (LOAD_BALANCE = YES)
+  (CONNECT_DATA =
+   (SERVER = DEDICATED)
+   (SERVICE_NAME = CRMDB)
+  )
+)
+
+VASBILL =
+ (DESCRIPTION =
+  (ADDRESS = (PROTOCOL = TCP)(HOST = ssc01-scan)(PORT = 1529))
+  (LOAD_BALANCE = YES)
+  (CONNECT_DATA =
+   (SERVER = DEDICATED)
+   (SERVICE_NAME = VASBILL)
+  )
+)
+
+CRMDBTST =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.160.176.54)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = CRMDBTST)
+    )
+  )
+
+
+
+BIPRODDB = 
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.160.151.66)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = BIPRODDB)
+    )
+  )

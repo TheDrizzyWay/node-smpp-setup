@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NODE SMPP STATUS PAGE</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+
+    <style>
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gateway Status Page</h1>
+
+    <% data.forEach(function (category){%>
+        <h3><%= category.name.toUpperCase() %> </h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+            </tr>
+            <% Object.keys(category.data).forEach(function(key) { %>
+                <tr>
+                    <td width="100px"><%= key.replace(/([a-z0-9])([A-Z])/g, '$1 $2').toUpperCase() %></td>
+                    <% // Check if the field is meant to display a date/time %>
+                    <%if ( (key.toLowerCase().indexOf('time') > 0 || key.toLowerCase().indexOf('date') > 0)  && parseInt(category.data[key]) && category.data[key].length == 13) { %>
+                        <td width="100px"><%= moment(parseInt(category.data[key])).startOf('day').fromNow()%></td>
+                    <% } else { %>
+                        <td width="100px"><%= category.data[key] %></td>
+                    <% } %>
+                    
+                </tr>
+            <% }); %>
+        
+         </table>
+
+    <% }); %>
+
+</body>
+</html>
